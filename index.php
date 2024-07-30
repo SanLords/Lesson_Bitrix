@@ -96,7 +96,7 @@ $APPLICATION->SetTitle("Мебельная компания");
 		"CACHE_GROUPS" => "Y",
 		"CACHE_TIME" => "300",
 		"CACHE_TYPE" => "A",
-		"DETAIL_URL" => "",
+		"DETAIL_URL" => "https://stolyarov.study.mcart.ru/obyavleniya/#ELEMENT_CODE#/",
 		"FIELD_CODE" => array("",""),
 		"IBLOCKS" => array("5"),
 		"IBLOCK_TYPE" => "advertisements",
