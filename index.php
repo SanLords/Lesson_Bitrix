@@ -7,25 +7,7 @@ $APPLICATION->SetTitle("Мебельная компания");
 <p>
 	 «Мебельная компания» осуществляет производство мебели на высококлассном оборудовании с применением минимальной доли ручного труда, что позволяет обеспечить высокое качество нашей продукции. Налажен производственный процесс как массового и индивидуального характера, что с одной стороны позволяет обеспечить постоянную номенклатуру изделий и индивидуальный подход – с другой.
 </p>
-<h3>Наша продукция<?$APPLICATION->IncludeComponent(
-	"bitrix:news.line",
-	"",
-	Array(
-		"ACTIVE_DATE_FORMAT" => "d.m.Y",
-		"CACHE_GROUPS" => "Y",
-		"CACHE_TIME" => "300",
-		"CACHE_TYPE" => "A",
-		"DETAIL_URL" => "",
-		"FIELD_CODE" => array("",""),
-		"IBLOCKS" => array(),
-		"IBLOCK_TYPE" => "advertisements",
-		"NEWS_COUNT" => "20",
-		"SORT_BY1" => "ACTIVE_FROM",
-		"SORT_BY2" => "SORT",
-		"SORT_ORDER1" => "DESC",
-		"SORT_ORDER2" => "ASC"
-	)
-);?></h3>
+<h3>Наша продукция</h3>
  <?$APPLICATION->IncludeComponent(
 	"bitrix:furniture.catalog.index",
 	"",
@@ -76,7 +58,7 @@ $APPLICATION->SetTitle("Мебельная компания");
 		"FIELD_CODE" => array("",""),
 		"FILTER_NAME" => "",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-		"IBLOCK_ID" => "",
+		"IBLOCK_ID" => "1",
 		"IBLOCK_TYPE" => "news",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
 		"INCLUDE_SUBSECTIONS" => "Y",
@@ -116,7 +98,7 @@ $APPLICATION->SetTitle("Мебельная компания");
 		"CACHE_TYPE" => "A",
 		"DETAIL_URL" => "",
 		"FIELD_CODE" => array("",""),
-		"IBLOCKS" => array(),
+		"IBLOCKS" => array("5"),
 		"IBLOCK_TYPE" => "advertisements",
 		"NEWS_COUNT" => "9",
 		"SORT_BY1" => "ACTIVE_FROM",
