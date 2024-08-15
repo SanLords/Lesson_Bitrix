@@ -9,15 +9,11 @@ IncludeTemplateLangFile(__FILE__);
   <title><?$APPLICATION->ShowTitle()?></title>
   <?$APPLICATION->ShowHead();?>
 
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700,900|Roboto+Mono:300,400,500">
-  <link rel="stylesheet" href="<?=SITE_TEMPLATE_PATH?>/fonts/icomoon/style.css">
-
-
 <?php 
   use Bitrix\Main\Page\Asset;
   $objAsset = Asset::getInstance();
 
+  $objAsset->addString('<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700,900|Roboto+Mono:300,400,500">');
   $objAsset->addCss(SITE_TEMPLATE_PATH.'/fonts/icomoon/style.css');
   $objAsset->addCss(SITE_TEMPLATE_PATH.'/css/bootstrap.min.css');
   $objAsset->addCss(SITE_TEMPLATE_PATH.'/css/magnific-popup.css');
