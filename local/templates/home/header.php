@@ -2,6 +2,21 @@
 <?
 IncludeTemplateLangFile(__FILE__);
 ?>
+
+<?php
+// Получаем текущий URL
+$currentUrl = $_SERVER['REQUEST_URI'];
+
+// Определяем URL главной страницы без query параметров
+$homeUrl = '/';
+
+// Удаляем query параметры из текущего URL
+$cleanUrl = strtok($currentUrl, '?');
+
+// Проверяем, является ли текущий URL не главным
+$isNotHomePage = ($cleanUrl != $homeUrl);
+?>
+
 <!DOCTYPE html>
 <html lang="<?=LANGUAGE_ID?>">
 
@@ -147,5 +162,29 @@ IncludeTemplateLangFile(__FILE__);
         </div>
       </div>
     </div>
+    <?php if ($isNotHomePage): ?>
+      <!-- <div class="site-blocks-cover inner-page-cover overlay" style="background-image: url(<?php echo SITE_TEMPLATE_PATH; ?>/images/hero_bg_2.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+      <div class="container">
+        <div class="row align-items-center justify-content-center text-center">
+          <div class="col-md-10">
+            <h1 class="mb-2"><?$APPLICATION->ShowTitle(false)?></h1> -->
+            <!-- <div><a href="index.html">Home</a> <span class="mx-2 text-white">&bullet;</span> <strong class="text-white">About</strong></div> -->
+            <?$APPLICATION->IncludeComponent(
+	"bitrix:breadcrumb", 
+	"breadcrumb", 
+	array(
+		"COMPONENT_TEMPLATE" => "breadcrumb",
+		"START_FROM" => "0",
+		"PATH" => "",
+		"SITE_ID" => "s1"
+	),
+	false
+);?>
+          <!-- </div>
+        </div>
+      </div>
+    </div> -->
+    <?php endif; ?>
+
   </div>
   

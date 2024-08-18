@@ -17,7 +17,7 @@ foreach($arResult as $arItem):?>
 	<?if ($arItem["IS_PARENT"]):?>
 
 		<?if ($arItem["DEPTH_LEVEL"] == 1):?>
-			<li class="<?if ($arItem["SELECTED"]):?>active<?else:?>has-children<?endif?>"><a href="<?=$arItem["LINK"]?>"><?=$arItem["TEXT"]?></a>
+			<li class="<?if ($arItem["SELECTED"]):?>active has-children<?else:?>has-children<?endif?>"><a href="<?=$arItem["LINK"]?>"><?=$arItem["TEXT"]?></a>
 				<ul class="dropdown">
 		<?else:?>
 			<li class="has-children"><a href="<?=$arItem["LINK"]?>"><?=$arItem["TEXT"]?></a>
