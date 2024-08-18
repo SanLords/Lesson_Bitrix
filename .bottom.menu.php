@@ -1,6 +1,12 @@
-<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
 <?
 $aMenuLinks = Array(
+	Array(
+		"Главная", 
+		"/index.php", 
+		Array(), 
+		Array(), 
+		"" 
+	),
 	Array(
 		"Контакты", 
 		"contacts/", 
@@ -9,8 +15,8 @@ $aMenuLinks = Array(
 		"" 
 	),
 	Array(
-		"Авторизация", 
-		"login/", 
+		"Объявления", 
+		"/obyavleniya/", 
 		Array(), 
 		Array(), 
 		"" 
