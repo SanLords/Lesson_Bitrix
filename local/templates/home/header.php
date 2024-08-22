@@ -122,6 +122,9 @@ $isNotHomePage = ($cleanUrl != $homeUrl);
 );?>
 
         </div>
+        <div class="col-6 col-md-6">
+          <a href="/login/">Вход на сайт</a>
+        </div>
       </div>
 
     </div>
@@ -163,12 +166,6 @@ $isNotHomePage = ($cleanUrl != $homeUrl);
       </div>
     </div>
     <?php if ($isNotHomePage): ?>
-      <!-- <div class="site-blocks-cover inner-page-cover overlay" style="background-image: url(<?php echo SITE_TEMPLATE_PATH; ?>/images/hero_bg_2.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
-      <div class="container">
-        <div class="row align-items-center justify-content-center text-center">
-          <div class="col-md-10">
-            <h1 class="mb-2"><?$APPLICATION->ShowTitle(false)?></h1> -->
-            <!-- <div><a href="index.html">Home</a> <span class="mx-2 text-white">&bullet;</span> <strong class="text-white">About</strong></div> -->
             <?$APPLICATION->IncludeComponent(
 	"bitrix:breadcrumb", 
 	"breadcrumb", 
@@ -180,10 +177,6 @@ $isNotHomePage = ($cleanUrl != $homeUrl);
 	),
 	false
 );?>
-          <!-- </div>
-        </div>
-      </div>
-    </div> -->
     <?php endif; ?>
 
   </div>

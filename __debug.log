@@ -1,0 +1,27 @@
+OnAfterUserAddHandler:
+Array
+(
+    [LOGIN] => 123213
+    [NAME] => admin213
+    [LAST_NAME] => 123123
+    [PASSWORD] => $6$OL6SXKgnS2sD0IQB$xlORBWq2zQz7bol7QghpbDoYjhjFK5lisNR1ZUwTsUNJcT5igSDyNbFNFU27HTy9G5KZ.ewmaeHENVvQzx36a1
+    [CHECKWORD] => 2c731uo714ode2hr2q77bznid1c0kot2
+    [~CHECKWORD_TIME] => now()
+    [CONFIRM_PASSWORD] => 123456
+    [EMAIL] => фцв@ma.ru
+    [PHONE_NUMBER] => 
+    [ACTIVE] => Y
+    [CONFIRM_CODE] => 
+    [SITE_ID] => s1
+    [LANGUAGE_ID] => ru
+    [USER_IP] => 85.140.114.39
+    [USER_HOST] => ppp85-140-114-39.pppoe.mtu-net.ru
+    [LID] => s1
+    [BLOCKED] => N
+    [PASSWORD_EXPIRED] => N
+    [PERSONAL_GENDER] => 
+    [ID] => 7
+    [RESULT] => 7
+)
+
+
