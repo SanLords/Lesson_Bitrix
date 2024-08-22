@@ -77,4 +77,19 @@ if (($arCurrentValues['USE_SHARE'] ?? 'N') === 'Y')
 		"TYPE" => "STRING",
 		"DEFAULT" => "",
 	);
+	$arTemplateParameters["SECTION_TITLE"] = array(
+		"NAME" => GetMessage("T_IBLOCK_DESC_SECTION_TITLE"),
+		"TYPE" => "STRING",
+		"DEFAULT" => GetMessage("DEFAULT_SECTION_TITLE"),
+	);
 }
+
+if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
+
+$arTemplateParameters = array(
+    "SECTION_TITLE" => array(
+        "NAME" => GetMessage("SECTION_TITLE"),
+        "TYPE" => "STRING",
+        "DEFAULT" => GetMessage("DEFAULT_SECTION_TITLE"),
+    ),
+);

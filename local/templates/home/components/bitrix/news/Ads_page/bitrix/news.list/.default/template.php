@@ -12,13 +12,13 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-
+<?echo '<pre>'; print_r($GLOBALS['arFilter']); echo '</pre>';?>
 <div class="site-section site-section-sm bg-light">
 <div class="container">
   <div class="row mb-5">
 	<div class="col-12">
 	  <div class="site-section-title">
-		<h2><?=GetMessage("TITLE_PROPERTIES")?></h2>
+		<h2><?=$arParams["SECTION_TITLE"]?></h2>
 	  </div>
 	</div>
   </div>

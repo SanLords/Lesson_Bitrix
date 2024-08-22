@@ -1,6 +1,6 @@
 <?php
 $arUrlRewrite=array (
-  8 => 
+  17 => 
   array (
     'CONDITION' => '#^/lichnyy-kabinet-prodavtsa/moi-obyavleniya/#',
     'RULE' => '',
@@ -16,7 +16,7 @@ $arUrlRewrite=array (
     'PATH' => '/o-servise/vakansii-/index.php',
     'SORT' => 100,
   ),
-  11 => 
+  16 => 
   array (
     'CONDITION' => '#^/obyavleniya/#',
     'RULE' => '',

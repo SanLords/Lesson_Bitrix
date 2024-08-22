@@ -1,14 +1,20 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Обратная связь");
-?>Text here....<?$APPLICATION->IncludeComponent(
-	"bitrix:main.feedback",
+?><?$APPLICATION->IncludeComponent("bitrix:main.feedback", "svaz", Array(
+	"EMAIL_TO" => "cfcf.01@mail.ru",	// E-mail, на который будет отправлено письмо
+		"EVENT_MESSAGE_ID" => "",	// Почтовые шаблоны для отправки письма
+		"OK_TEXT" => "Спасибо, ваше сообщение принято.",	// Сообщение, выводимое пользователю после отправки
+		"REQUIRED_FIELDS" => "",	// Обязательные поля для заполнения
+		"USE_CAPTCHA" => "Y",	// Использовать защиту от автоматических сообщений (CAPTCHA) для неавторизованных пользователей
+	),
+	false
+);?><?$APPLICATION->IncludeComponent(
+	"bitrix:main.include",
 	"",
 	Array(
-		"EMAIL_TO" => "cfcf.01@mail.ru",
-		"EVENT_MESSAGE_ID" => array(),
-		"OK_TEXT" => "Спасибо, ваше сообщение принято.",
-		"REQUIRED_FIELDS" => array(),
-		"USE_CAPTCHA" => "Y"
+		"AREA_FILE_SHOW" => "page",
+		"AREA_FILE_SUFFIX" => "inc",
+		"EDIT_TEMPLATE" => ""
 	)
 );?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
