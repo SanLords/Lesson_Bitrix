@@ -140,17 +140,20 @@ $APPLICATION->SetTitle("Мебельная компания");
 	"bitrix:news.line", 
 	"NEW_PROPERTIES", 
 	array(
+		"FIELD_CODE" => array(
+			0 => "PREVIEW_TEXT",
+			1 => "PREVIEW_PICTURE",
+			2 => "PROPERTY_TOTAL_AREA",
+			3 => "PROPERTY_PRICE",
+			4 => "PROPERTY_FLOORS_COUNT",
+			5 => "PROPERTY_BATHROOMS_COUNT",
+			6 => "PROPERTY_GARAGE",
+		),
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"CACHE_GROUPS" => "Y",
 		"CACHE_TIME" => "216000",
 		"CACHE_TYPE" => "A",
 		"DETAIL_URL" => "",
-		"FIELD_CODE" => array(
-			0 => "",
-			1 => "PREVIEW_TEXT",
-			2 => "PREVIEW_PICTURE",
-			3 => "",
-		),
 		"IBLOCKS" => array(
 			0 => "5",
 		),
@@ -167,26 +170,30 @@ $APPLICATION->SetTitle("Мебельная компания");
 	
 
 
-<?$APPLICATION->IncludeComponent("bitrix:news.line", "Servicrs", Array(
-	"ACTIVE_DATE_FORMAT" => "d.m.Y",	// Формат показа даты
-		"CACHE_GROUPS" => "Y",	// Учитывать права доступа
-		"CACHE_TIME" => "7257600",	// Время кеширования (сек.)
-		"CACHE_TYPE" => "A",	// Тип кеширования
-		"DETAIL_URL" => "",	// URL, ведущий на страницу с содержимым элемента раздела
-		"FIELD_CODE" => array(	// Поля
+<?$APPLICATION->IncludeComponent(
+	"bitrix:news.line", 
+	"Servicrs", 
+	array(
+		"FIELD_CODE" => array(
 			0 => "",
-			1 => "",
+			1 => "PROPERTY_EXTERNAL_LINK",
+			2 => "PROPERTY_ICON",
 		),
-		"IBLOCKS" => array(	// Код информационного блока
+		"ACTIVE_DATE_FORMAT" => "d.m.Y",
+		"CACHE_GROUPS" => "Y",
+		"CACHE_TIME" => "7257600",
+		"CACHE_TYPE" => "A",
+		"DETAIL_URL" => "",
+		"IBLOCKS" => array(
 			0 => "6",
 		),
-		"IBLOCK_TYPE" => "Services",	// Тип информационного блока
-		"NEWS_COUNT" => "6",	// Количество новостей на странице
-		"SORT_BY1" => "ACTIVE_FROM",	// Поле для первой сортировки новостей
-		"SORT_BY2" => "SORT",	// Поле для второй сортировки новостей
-		"SORT_ORDER1" => "DESC",	// Направление для первой сортировки новостей
-		"SORT_ORDER2" => "ASC",	// Направление для второй сортировки новостей
-		"COMPONENT_TEMPLATE" => ".default"
+		"IBLOCK_TYPE" => "Services",
+		"NEWS_COUNT" => "6",
+		"SORT_BY1" => "ACTIVE_FROM",
+		"SORT_BY2" => "SORT",
+		"SORT_ORDER1" => "DESC",
+		"SORT_ORDER2" => "ASC",
+		"COMPONENT_TEMPLATE" => "Servicrs"
 	),
 	false
 );?>
@@ -224,4 +231,4 @@ $APPLICATION->SetTitle("Мебельная компания");
 </div>
 
 
-?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

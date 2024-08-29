@@ -36,7 +36,7 @@ $this->setFrameMode(true);
 			</figure>
 			<div class="prop-text">
 				<div class="inner">
-					<span class="price rounded"><?=$arItem['DISPLAY_PROPERTIES']['PRICE']['VALUE']?></span>
+					<span class="price rounded"><?=$arItem['PROPERTY_PRICE_VALUE']?></span>
 					<h3 class="title"><?=$arItem["NAME"]?></h3>
 					<p class="location"><?=$arItem["PREVIEW_TEXT"]?></p>
 				</div>
@@ -44,19 +44,19 @@ $this->setFrameMode(true);
 					<div class="inner d-flex">
 					<div class="col">
 						<span><?=GetMessage("AREA")?>:</span>
-						<strong><?=$arItem['DISPLAY_PROPERTIES']['TOTAL_AREA']['VALUE']?><sup>2</sup></strong>
+						<strong><?=$arItem['PROPERTY_TOTAL_AREA_VALUE']?><sup>2</sup></strong>
 					</div>
 					<div class="col">
 						<span><?=GetMessage("FLOORS")?>:</span>
-						<strong><?=$arItem['DISPLAY_PROPERTIES']['FLOORS_COUNT']['VALUE']?></strong>
+						<strong><?=$arItem['PROPERTY_FLOORS_COUNT_VALUE']?></strong>
 					</div>
 					<div class="col">
 						<span><?=GetMessage("BATHROOMS")?>:</span>
-						<strong><?=$arItem['DISPLAY_PROPERTIES']['BATHROOMS_COUNT']['VALUE']?></strong>
+						<strong><?=$arItem['PROPERTY_BATHROOMS_COUNT_VALUE']?></strong>
 					</div>
 					<div class="col">
 						<span><?=GetMessage("GARAGE")?>:</span>
-						<strong><?=$arItem['DISPLAY_PROPERTIES']['GARAGE']['VALUE']?></strong>
+						<strong><?=$arItem['PROPERTY_GARAGE_VALUE']?></strong>
 					</div>
 				</div>
 			</div>
